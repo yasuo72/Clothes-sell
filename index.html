@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FashionHub - Premium Clothing Store</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="top-bar">
+            <div class="container">
+                <p><i class="fas fa-truck"></i> Free Shipping on Orders Over $50</p>
+                <div class="top-links">
+                    <a href="#"><i class="fas fa-phone"></i> +1 234 567 890</a>
+                    <a href="#"><i class="fas fa-envelope"></i> support@fashionhub.com</a>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="logo">
+                    <i class="fas fa-tshirt"></i>
+                    Fashion<span>Hub</span>
+                </a>
+                
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search for products...">
+                    <button id="searchBtn"><i class="fas fa-search"></i></button>
+                </div>
+
+                <div class="nav-icons">
+                    <a href="#" id="userBtn" class="nav-icon">
+                        <i class="fas fa-user"></i>
+                        <span>Account</span>
+                    </a>
+                    <a href="#" id="wishlistBtn" class="nav-icon">
+                        <i class="fas fa-heart"></i>
+                        <span>Wishlist</span>
+                        <span class="badge wishlist-count">0</span>
+                    </a>
+                    <a href="#" id="cartBtn" class="nav-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Cart</span>
+                        <span class="badge cart-count">0</span>
+                    </a>
+                </div>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+        
+        <div class="nav-menu" id="navMenu">
+            <div class="container">
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li class="has-dropdown">
+                        <a href="#shop">Shop <i class="fas fa-chevron-down"></i></a>
+                        <div class="mega-menu">
+                            <div class="mega-menu-col">
+                                <h4>Men</h4>
+                                <ul>
+                                    <li><a href="#" data-category="men-shirts">Shirts</a></li>
+                                    <li><a href="#" data-category="men-pants">Pants</a></li>
+                                    <li><a href="#" data-category="men-jackets">Jackets</a></li>
+                                    <li><a href="#" data-category="men-accessories">Accessories</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-col">
+                                <h4>Women</h4>
+                                <ul>
+                                    <li><a href="#" data-category="women-dresses">Dresses</a></li>
+                                    <li><a href="#" data-category="women-tops">Tops</a></li>
+                                    <li><a href="#" data-category="women-pants">Pants</a></li>
+                                    <li><a href="#" data-category="women-accessories">Accessories</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-col">
+                                <h4>Kids</h4>
+                                <ul>
+                                    <li><a href="#" data-category="kids-boys">Boys</a></li>
+                                    <li><a href="#" data-category="kids-girls">Girls</a></li>
+                                    <li><a href="#" data-category="kids-baby">Baby</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-col mega-menu-banner">
+                                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=300" alt="Sale">
+                                <div class="banner-content">
+                                    <h4>Summer Sale</h4>
+                                    <p>Up to 50% Off</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#new-arrivals">New Arrivals</a></li>
+                    <li><a href="#deals">Deals</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <h3>Menu</h3>
+            <button class="close-btn" id="closeMobileMenu"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="mobile-search">
+            <input type="text" placeholder="Search...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="#home">Home</a></li>
+            <li class="mobile-dropdown">
+                <a href="#">Shop <i class="fas fa-chevron-down"></i></a>
+                <ul class="mobile-submenu">
+                    <li><a href="#" data-category="men">Men</a></li>
+                    <li><a href="#" data-category="women">Women</a></li>
+                    <li><a href="#" data-category="kids">Kids</a></li>
+                </ul>
+            </li>
+            <li><a href="#new-arrivals">New Arrivals</a></li>
+            <li><a href="#deals">Deals</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="mobile-menu-footer">
+            <a href="#" id="mobileLoginBtn"><i class="fas fa-user"></i> Login / Register</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-slider">
+            <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1600')">
+                <div class="hero-content">
+                    <span class="hero-subtitle">New Collection 2024</span>
+                    <h1>Discover Your Style</h1>
+                    <p>Explore the latest trends in fashion with our exclusive collection</p>
+                    <div class="hero-buttons">
+                        <a href="#shop" class="btn btn-primary">Shop Now</a>
+                        <a href="#new-arrivals" class="btn btn-outline">View Collection</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1600')">
+                <div class="hero-content">
+                    <span class="hero-subtitle">Summer Sale</span>
+                    <h1>Up to 50% Off</h1>
+                    <p>Don't miss out on our biggest sale of the season</p>
+                    <div class="hero-buttons">
+                        <a href="#deals" class="btn btn-primary">Shop Sale</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1445205170230-053b83016050?w=1600')">
+                <div class="hero-content">
+                    <span class="hero-subtitle">Premium Quality</span>
+                    <h1>Luxury Fashion</h1>
+                    <p>Experience the finest fabrics and craftsmanship</p>
+                    <div class="hero-buttons">
+                        <a href="#shop" class="btn btn-primary">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-controls">
+            <button class="hero-prev"><i class="fas fa-chevron-left"></i></button>
+            <div class="hero-dots"></div>
+            <button class="hero-next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-truck"></i>
+                    <h4>Free Shipping</h4>
+                    <p>On orders over $50</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-undo"></i>
+                    <h4>Easy Returns</h4>
+                    <p>30-day return policy</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-lock"></i>
+                    <h4>Secure Payment</h4>
+                    <p>100% secure checkout</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-headset"></i>
+                    <h4>24/7 Support</h4>
+                    <p>Dedicated support team</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Shop by Category</h2>
+                <p>Find the perfect style for everyone</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card" data-category="men">
+                    <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?w=600" alt="Men">
+                    <div class="category-overlay">
+                        <h3>Men</h3>
+                        <span>150+ Products</span>
+                        <a href="#shop" class="btn btn-small">Shop Now</a>
+                    </div>
+                </div>
+                <div class="category-card" data-category="women">
+                    <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=600" alt="Women">
+                    <div class="category-overlay">
+                        <h3>Women</h3>
+                        <span>200+ Products</span>
+                        <a href="#shop" class="btn btn-small">Shop Now</a>
+                    </div>
+                </div>
+                <div class="category-card" data-category="kids">
+                    <img src="https://images.unsplash.com/photo-1503919545889-aef636e10ad4?w=600" alt="Kids">
+                    <div class="category-overlay">
+                        <h3>Kids</h3>
+                        <span>100+ Products</span>
+                        <a href="#shop" class="btn btn-small">Shop Now</a>
+                    </div>
+                </div>
+                <div class="category-card large" data-category="accessories">
+                    <img src="https://images.unsplash.com/photo-1523779105320-d1cd346ff52b?w=800" alt="Accessories">
+                    <div class="category-overlay">
+                        <h3>Accessories</h3>
+                        <span>80+ Products</span>
+                        <a href="#shop" class="btn btn-small">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Arrivals Section -->
+    <section class="products-section" id="new-arrivals">
+        <div class="container">
+            <div class="section-header">
+                <h2>New Arrivals</h2>
+                <p>Check out our latest products</p>
+            </div>
+            <div class="products-tabs">
+                <button class="tab-btn active" data-tab="all">All</button>
+                <button class="tab-btn" data-tab="men">Men</button>
+                <button class="tab-btn" data-tab="women">Women</button>
+                <button class="tab-btn" data-tab="kids">Kids</button>
+            </div>
+            <div class="products-grid" id="newArrivalsGrid">
+                <!-- Products will be loaded dynamically -->
+            </div>
+            <div class="load-more">
+                <button class="btn btn-outline" id="loadMoreNew">Load More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner Section -->
+    <section class="promo-banner">
+        <div class="container">
+            <div class="banner-grid">
+                <div class="banner-item">
+                    <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=800" alt="Summer Collection">
+                    <div class="banner-content">
+                        <span>Summer 2024</span>
+                        <h3>Beach Collection</h3>
+                        <a href="#shop" class="btn btn-small">Shop Now</a>
+                    </div>
+                </div>
+                <div class="banner-item">
+                    <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=800" alt="Premium Collection">
+                    <div class="banner-content">
+                        <span>Limited Edition</span>
+                        <h3>Premium Wear</h3>
+                        <a href="#shop" class="btn btn-small">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section class="shop-section" id="shop">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Products</h2>
+                <p>Browse our complete collection</p>
+            </div>
+            <div class="shop-layout">
+                <!-- Filters Sidebar -->
+                <aside class="filters-sidebar" id="filtersSidebar">
+                    <div class="filters-header">
+                        <h3><i class="fas fa-filter"></i> Filters</h3>
+                        <button class="clear-filters" id="clearFilters">Clear All</button>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h4>Categories</h4>
+                        <ul class="filter-list">
+                            <li>
+                                <label>
+                                    <input type="checkbox" name="category" value="men">
+                                    <span>Men</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" name="category" value="women">
+                                    <span>Women</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" name="category" value="kids">
+                                    <span>Kids</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Price Range</h4>
+                        <div class="price-range">
+                            <input type="range" id="priceRange" min="0" max="500" value="500">
+                            <div class="price-inputs">
+                                <input type="number" id="minPrice" placeholder="Min" value="0">
+                                <span>-</span>
+                                <input type="number" id="maxPrice" placeholder="Max" value="500">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Size</h4>
+                        <div class="size-options">
+                            <label class="size-option">
+                                <input type="checkbox" name="size" value="XS">
+                                <span>XS</span>
+                            </label>
+                            <label class="size-option">
+                                <input type="checkbox" name="size" value="S">
+                                <span>S</span>
+                            </label>
+                            <label class="size-option">
+                                <input type="checkbox" name="size" value="M">
+                                <span>M</span>
+                            </label>
+                            <label class="size-option">
+                                <input type="checkbox" name="size" value="L">
+                                <span>L</span>
+                            </label>
+                            <label class="size-option">
+                                <input type="checkbox" name="size" value="XL">
+                                <span>XL</span>
+                            </label>
+                            <label class="size-option">
+                                <input type="checkbox" name="size" value="XXL">
+                                <span>XXL</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Color</h4>
+                        <div class="color-options">
+                            <label class="color-option" style="background: #000;">
+                                <input type="checkbox" name="color" value="black">
+                            </label>
+                            <label class="color-option" style="background: #fff; border: 1px solid #ddd;">
+                                <input type="checkbox" name="color" value="white">
+                            </label>
+                            <label class="color-option" style="background: #e74c3c;">
+                                <input type="checkbox" name="color" value="red">
+                            </label>
+                            <label class="color-option" style="background: #3498db;">
+                                <input type="checkbox" name="color" value="blue">
+                            </label>
+                            <label class="color-option" style="background: #27ae60;">
+                                <input type="checkbox" name="color" value="green">
+                            </label>
+                            <label class="color-option" style="background: #f1c40f;">
+                                <input type="checkbox" name="color" value="yellow">
+                            </label>
+                            <label class="color-option" style="background: #9b59b6;">
+                                <input type="checkbox" name="color" value="purple">
+                            </label>
+                            <label class="color-option" style="background: #e91e63;">
+                                <input type="checkbox" name="color" value="pink">
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Rating</h4>
+                        <ul class="filter-list">
+                            <li>
+                                <label>
+                                    <input type="radio" name="rating" value="4">
+                                    <span class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                    <span>& Up</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="rating" value="3">
+                                    <span class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                    <span>& Up</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button class="btn btn-primary btn-block" id="applyFilters">Apply Filters</button>
+                </aside>
+
+                <!-- Products Area -->
+                <div class="products-area">
+                    <div class="products-toolbar">
+                        <div class="toolbar-left">
+                            <button class="filter-toggle" id="filterToggle">
+                                <i class="fas fa-filter"></i> Filters
+                            </button>
+                            <span class="results-count">Showing <span id="resultsCount">0</span> products</span>
+                        </div>
+                        <div class="toolbar-right">
+                            <div class="view-options">
+                                <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i></button>
+                                <button class="view-btn" data-view="list"><i class="fas fa-list"></i></button>
+                            </div>
+                            <select class="sort-select" id="sortSelect">
+                                <option value="default">Default Sorting</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="name-asc">Name: A to Z</option>
+                                <option value="name-desc">Name: Z to A</option>
+                                <option value="rating">Top Rated</option>
+                                <option value="newest">Newest First</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="products-grid" id="shopProductsGrid">
+                        <!-- Products will be loaded dynamically -->
+                    </div>
+                    <div class="pagination" id="pagination">
+                        <!-- Pagination will be generated dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deals Section -->
+    <section class="deals-section" id="deals">
+        <div class="container">
+            <div class="section-header">
+                <h2>Hot Deals</h2>
+                <p>Limited time offers - Don't miss out!</p>
+            </div>
+            <div class="deals-countdown">
+                <h3>Deal Ends In:</h3>
+                <div class="countdown" id="countdown">
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="days">00</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="hours">00</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="minutes">00</span>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="seconds">00</span>
+                        <span class="countdown-label">Seconds</span>
+                    </div>
+                </div>
+            </div>
+            <div class="products-grid" id="dealsGrid">
+                <!-- Deal products will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Customers Say</h2>
+                <p>Real reviews from real customers</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonials-track" id="testimonialsTrack">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Amazing quality and fast shipping! I love my new dress. Will definitely shop here again."</p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Sarah Johnson">
+                            <div>
+                                <h4>Sarah Johnson</h4>
+                                <span>Verified Buyer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Best online shopping experience I've had. The clothes fit perfectly and the customer service is excellent."</p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Michael Chen">
+                            <div>
+                                <h4>Michael Chen</h4>
+                                <span>Verified Buyer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p>"Great prices and trendy styles. My go-to store for all my fashion needs. Highly recommended!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Emily Davis">
+                            <div>
+                                <h4>Emily Davis</h4>
+                                <span>Verified Buyer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"The quality exceeded my expectations. The fabric is premium and the stitching is perfect."</p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="David Wilson">
+                            <div>
+                                <h4>David Wilson</h4>
+                                <span>Verified Buyer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonials-controls">
+                    <button class="testimonial-prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="testimonial-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Subscribe to Our Newsletter</h2>
+                    <p>Get 10% off your first order and stay updated with the latest trends and exclusive offers.</p>
+                </div>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Feed -->
+    <section class="instagram-feed">
+        <div class="container">
+            <div class="section-header">
+                <h2>Follow Us on Instagram</h2>
+                <p>@fashionhub</p>
+            </div>
+            <div class="instagram-grid">
+                <a href="#" class="instagram-item">
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400" alt="Instagram">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </a>
+                <a href="#" class="instagram-item">
+                    <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=400" alt="Instagram">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </a>
+                <a href="#" class="instagram-item">
+                    <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=400" alt="Instagram">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </a>
+                <a href="#" class="instagram-item">
+                    <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=400" alt="Instagram">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </a>
+                <a href="#" class="instagram-item">
+                    <img src="https://images.unsplash.com/photo-1475180098004-ca77a66827be?w=400" alt="Instagram">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </a>
+                <a href="#" class="instagram-item">
+                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=400" alt="Instagram">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800" alt="About Us">
+                </div>
+                <div class="about-content">
+                    <h2>About FashionHub</h2>
+                    <p>Welcome to FashionHub, your premier destination for trendy and affordable fashion. Since 2010, we've been dedicated to bringing you the latest styles and highest quality clothing.</p>
+                    <p>Our mission is to make fashion accessible to everyone while maintaining sustainability and ethical practices. We carefully curate our collection to ensure every piece meets our high standards.</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">50K+</span>
+                            <span class="stat-label">Happy Customers</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Products</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">Countries</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-primary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>We'd love to hear from you</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>123 Fashion Street, New York, NY 10001</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+1 234 567 890</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>support@fashionhub.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Working Hours</h4>
+                            <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>First Name</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Last Name</label>
+                            <input type="text" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Subject</label>
+                        <select>
+                            <option>General Inquiry</option>
+                            <option>Order Status</option>
+                            <option>Returns & Refunds</option>
+                            <option>Product Information</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="footer-logo">
+                        <i class="fas fa-tshirt"></i>
+                        Fashion<span>Hub</span>
+                    </a>
+                    <p>Your trusted destination for trendy and affordable fashion since 2010.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#shop">Shop</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Order Tracking</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Store Locations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Payment Methods</h4>
+                    <div class="payment-methods">
+                        <img src="https://img.icons8.com/color/48/visa.png" alt="Visa">
+                        <img src="https://img.icons8.com/color/48/mastercard.png" alt="Mastercard">
+                        <img src="https://img.icons8.com/color/48/paypal.png" alt="PayPal">
+                        <img src="https://img.icons8.com/color/48/amex.png" alt="Amex">
+                    </div>
+                    <h4>Download App</h4>
+                    <div class="app-buttons">
+                        <a href="#"><img src="https://img.icons8.com/color/144/google-play.png" alt="Google Play"></a>
+                        <a href="#"><img src="https://img.icons8.com/ios-filled/50/mac-os.png" alt="App Store"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FashionHub. All rights reserved. Designed with <i class="fas fa-heart"></i> by FashionHub Team</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> Your Cart</h3>
+            <button class="close-btn" id="closeCart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be loaded dynamically -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-subtotal">
+                <span>Subtotal:</span>
+                <span id="cartSubtotal">$0.00</span>
+            </div>
+            <div class="cart-actions">
+                <a href="#" class="btn btn-outline" id="viewCartBtn">View Cart</a>
+                <a href="#" class="btn btn-primary" id="checkoutBtn">Checkout</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wishlist Sidebar -->
+    <div class="wishlist-sidebar" id="wishlistSidebar">
+        <div class="wishlist-header">
+            <h3><i class="fas fa-heart"></i> Your Wishlist</h3>
+            <button class="close-btn" id="closeWishlist"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="wishlist-items" id="wishlistItems">
+            <!-- Wishlist items will be loaded dynamically -->
+        </div>
+    </div>
+
+    <!-- Product Quick View Modal -->
+    <div class="modal" id="quickViewModal">
+        <div class="modal-content quick-view-content">
+            <button class="modal-close" id="closeQuickView"><i class="fas fa-times"></i></button>
+            <div class="quick-view-grid">
+                <div class="quick-view-gallery">
+                    <div class="main-image">
+                        <img src="" alt="" id="quickViewMainImage">
+                    </div>
+                    <div class="thumbnail-images" id="quickViewThumbnails">
+                        <!-- Thumbnails will be loaded dynamically -->
+                    </div>
+                </div>
+                <div class="quick-view-details">
+                    <h2 id="quickViewTitle"></h2>
+                    <div class="product-rating" id="quickViewRating"></div>
+                    <div class="product-price" id="quickViewPrice"></div>
+                    <p class="product-description" id="quickViewDescription"></p>
+                    
+                    <div class="product-options">
+                        <div class="option-group">
+                            <label>Color:</label>
+                            <div class="color-options" id="quickViewColors"></div>
+                        </div>
+                        <div class="option-group">
+                            <label>Size:</label>
+                            <div class="size-options" id="quickViewSizes"></div>
+                        </div>
+                        <div class="option-group">
+                            <label>Quantity:</label>
+                            <div class="quantity-selector">
+                                <button class="qty-btn minus"><i class="fas fa-minus"></i></button>
+                                <input type="number" value="1" min="1" id="quickViewQty">
+                                <button class="qty-btn plus"><i class="fas fa-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-actions">
+                        <button class="btn btn-primary btn-block" id="quickViewAddToCart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                        <button class="btn btn-outline" id="quickViewAddToWishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="product-meta">
+                        <p><strong>SKU:</strong> <span id="quickViewSku"></span></p>
+                        <p><strong>Category:</strong> <span id="quickViewCategory"></span></p>
+                        <p><strong>Tags:</strong> <span id="quickViewTags"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login/Register Modal -->
+    <div class="modal" id="authModal">
+        <div class="modal-content auth-content">
+            <button class="modal-close" id="closeAuth"><i class="fas fa-times"></i></button>
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-tab="login">Login</button>
+                <button class="auth-tab" data-tab="register">Register</button>
+            </div>
+            
+            <!-- Login Form -->
+            <form class="auth-form active" id="loginForm">
+                <h2>Welcome Back!</h2>
+                <p>Please login to your account</p>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <div class="password-input">
+                        <input type="password" required>
+                        <button type="button" class="toggle-password"><i class="fas fa-eye"></i></button>
+                    </div>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span>Remember me</span>
+                    </label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Login</button>
+                <div class="social-login">
+                    <p>Or login with</p>
+                    <div class="social-buttons">
+                        <button type="button" class="social-btn google"><i class="fab fa-google"></i> Google</button>
+                        <button type="button" class="social-btn facebook"><i class="fab fa-facebook-f"></i> Facebook</button>
+                    </div>
+                </div>
+            </form>
+            
+            <!-- Register Form -->
+            <form class="auth-form" id="registerForm">
+                <h2>Create Account</h2>
+                <p>Join us and start shopping</p>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <div class="password-input">
+                        <input type="password" required>
+                        <button type="button" class="toggle-password"><i class="fas fa-eye"></i></button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Confirm Password</label>
+                    <div class="password-input">
+                        <input type="password" required>
+                        <button type="button" class="toggle-password"><i class="fas fa-eye"></i></button>
+                    </div>
+                </div>
+                <label class="checkbox">
+                    <input type="checkbox" required>
+                    <span>I agree to the <a href="#">Terms & Conditions</a></span>
+                </label>
+                <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+                <div class="social-login">
+                    <p>Or register with</p>
+                    <div class="social-buttons">
+                        <button type="button" class="social-btn google"><i class="fab fa-google"></i> Google</button>
+                        <button type="button" class="social-btn facebook"><i class="fab fa-facebook-f"></i> Facebook</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkoutModal">
+        <div class="modal-content checkout-content">
+            <button class="modal-close" id="closeCheckout"><i class="fas fa-times"></i></button>
+            <div class="checkout-steps">
+                <div class="step active" data-step="1">
+                    <span class="step-number">1</span>
+                    <span class="step-label">Shipping</span>
+                </div>
+                <div class="step" data-step="2">
+                    <span class="step-number">2</span>
+                    <span class="step-label">Payment</span>
+                </div>
+                <div class="step" data-step="3">
+                    <span class="step-number">3</span>
+                    <span class="step-label">Review</span>
+                </div>
+            </div>
+            
+            <div class="checkout-panels">
+                <!-- Step 1: Shipping -->
+                <div class="checkout-panel active" id="shippingPanel">
+                    <h3>Shipping Information</h3>
+                    <form id="shippingForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>First Name *</label>
+                                <input type="text" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Last Name *</label>
+                                <input type="text" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Email *</label>
+                            <input type="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone *</label>
+                            <input type="tel" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Address *</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>City *</label>
+                                <input type="text" required>
+                            </div>
+                            <div class="form-group">
+                                <label>State *</label>
+                                <input type="text" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Zip Code *</label>
+                                <input type="text" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Country *</label>
+                                <select required>
+                                    <option value="">Select Country</option>
+                                    <option value="US">United States</option>
+                                    <option value="UK">United Kingdom</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="AU">Australia</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="shipping-options">
+                            <h4>Shipping Method</h4>
+                            <label class="shipping-option">
+                                <input type="radio" name="shipping" value="standard" checked>
+                                <div class="option-content">
+                                    <span class="option-title">Standard Shipping</span>
+                                    <span class="option-desc">5-7 business days</span>
+                                    <span class="option-price">Free</span>
+                                </div>
+                            </label>
+                            <label class="shipping-option">
+                                <input type="radio" name="shipping" value="express">
+                                <div class="option-content">
+                                    <span class="option-title">Express Shipping</span>
+                                    <span class="option-desc">2-3 business days</span>
+                                    <span class="option-price">$9.99</span>
+                                </div>
+                            </label>
+                            <label class="shipping-option">
+                                <input type="radio" name="shipping" value="overnight">
+                                <div class="option-content">
+                                    <span class="option-title">Overnight Shipping</span>
+                                    <span class="option-desc">Next business day</span>
+                                    <span class="option-price">$19.99</span>
+                                </div>
+                            </label>
+                        </div>
+                        <button type="button" class="btn btn-primary" id="toPaymentBtn">Continue to Payment</button>
+                    </form>
+                </div>
+                
+                <!-- Step 2: Payment -->
+                <div class="checkout-panel" id="paymentPanel">
+                    <h3>Payment Information</h3>
+                    <form id="paymentForm">
+                        <div class="payment-methods">
+                            <label class="payment-method">
+                                <input type="radio" name="payment" value="card" checked>
+                                <span><i class="fas fa-credit-card"></i> Credit/Debit Card</span>
+                            </label>
+                            <label class="payment-method">
+                                <input type="radio" name="payment" value="paypal">
+                                <span><i class="fab fa-paypal"></i> PayPal</span>
+                            </label>
+                        </div>
+                        
+                        <div class="card-details" id="cardDetails">
+                            <div class="form-group">
+                                <label>Card Number *</label>
+                                <input type="text" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Cardholder Name *</label>
+                                <input type="text" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Expiry Date *</label>
+                                    <input type="text" placeholder="MM/YY" maxlength="5" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>CVV *</label>
+                                    <input type="text" placeholder="123" maxlength="4" required>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Coupon Code</label>
+                            <div class="coupon-input">
+                                <input type="text" id="couponInput" placeholder="Enter coupon code">
+                                <button type="button" class="btn btn-outline" id="applyCouponBtn">Apply</button>
+                            </div>
+                        </div>
+                        
+                        <div class="checkout-buttons">
+                            <button type="button" class="btn btn-outline" id="backToShippingBtn">Back</button>
+                            <button type="button" class="btn btn-primary" id="toReviewBtn">Review Order</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Step 3: Review -->
+                <div class="checkout-panel" id="reviewPanel">
+                    <h3>Review Your Order</h3>
+                    <div class="order-summary">
+                        <div class="summary-section">
+                            <h4>Shipping Address</h4>
+                            <p id="reviewShippingAddress"></p>
+                        </div>
+                        <div class="summary-section">
+                            <h4>Payment Method</h4>
+                            <p id="reviewPaymentMethod"></p>
+                        </div>
+                        <div class="summary-section">
+                            <h4>Order Items</h4>
+                            <div id="reviewOrderItems"></div>
+                        </div>
+                        <div class="summary-totals">
+                            <div class="total-row">
+                                <span>Subtotal:</span>
+                                <span id="reviewSubtotal">$0.00</span>
+                            </div>
+                            <div class="total-row">
+                                <span>Shipping:</span>
+                                <span id="reviewShipping">Free</span>
+                            </div>
+                            <div class="total-row" id="reviewDiscountRow" style="display: none;">
+                                <span>Discount:</span>
+                                <span id="reviewDiscount">-$0.00</span>
+                            </div>
+                            <div class="total-row">
+                                <span>Tax:</span>
+                                <span id="reviewTax">$0.00</span>
+                            </div>
+                            <div class="total-row total">
+                                <span>Total:</span>
+                                <span id="reviewTotal">$0.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkout-buttons">
+                        <button type="button" class="btn btn-outline" id="backToPaymentBtn">Back</button>
+                        <button type="button" class="btn btn-primary" id="placeOrderBtn">
+                            <i class="fas fa-lock"></i> Place Order
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Confirmation Modal -->
+    <div class="modal" id="orderConfirmModal">
+        <div class="modal-content order-confirm-content">
+            <div class="order-success">
+                <i class="fas fa-check-circle"></i>
+                <h2>Order Placed Successfully!</h2>
+                <p>Thank you for your purchase</p>
+                <div class="order-details">
+                    <p>Order Number: <strong id="orderNumber">#FH12345678</strong></p>
+                    <p>A confirmation email has been sent to your email address.</p>
+                </div>
+                <div class="order-actions">
+                    <button class="btn btn-primary" id="continueShopping">Continue Shopping</button>
+                    <button class="btn btn-outline">Track Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
